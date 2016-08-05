@@ -128,23 +128,23 @@ do
         -h)
         HOST="$2"
         if [[ $HOST == "" ]]; then break; fi
-        CHILD_ARGS="$CHILD_ARGS HOST=$HOST"
+        CHILD_ARGS="$CHILD_ARGS -h $HOST"
         shift 2
         ;;
         --host=*)
         HOST="${1#*=}"
-        CHILD_ARGS="$CHILD_ARGS HOST=$HOST"
+        CHILD_ARGS="$CHILD_ARGS -h $HOST"
         shift 1
         ;;
         -p)
         PORT="$2"
         if [[ $PORT == "" ]]; then break; fi
-        CHILD_ARGS="$CHILD_ARGS PORT=$PORT"
+        CHILD_ARGS="$CHILD_ARGS -p $PORT"
         shift 2
         ;;
         --port=*)
         PORT="${1#*=}"
-        CHILD_ARGS="$CHILD_ARGS PORT=$PORT"
+        CHILD_ARGS="$CHILD_ARGS -p $PORT"
         shift 1
         ;;
         -t)
